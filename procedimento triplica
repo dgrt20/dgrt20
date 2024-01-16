@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void triplica (int *a)
+{
+*a *= 3;
+}
+
+int main ()
+{
+int x;
+x = 5;
+printf ("X = %d\n", x);
+triplica (&x);
+printf ("X = %d\n", x);
+return 0;
+}
