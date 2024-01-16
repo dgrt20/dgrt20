@@ -8,11 +8,16 @@ void troca(int *a, int *b)
 
 int main()
 {
-int x = 1, y = 2;
+    int x, y;
+printf("digite o valor de x:");
+scanf("%d", &x);
+printf("digite o valor de y:");
+scanf("%d", &y);
+
 printf("o valor de x e:%d\n", x);
 printf("o valor de y e:%d\n", y);
 troca (&y, &x);
-printf("o valor de x:%d", x);
-printf9("o valor de y:%d", y);
+printf("o valor depois da troca x:%d\n", x);
+printf("o valor depois da troca y:%d", y);
 return 0;
 }
