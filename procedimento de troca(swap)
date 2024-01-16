@@ -1,1 +1,18 @@
-#
+#include <stdio.h>
+void troca(int *a, int *b)
+{
+    int c = *a;
+*a = *b;
+*b = c;
+}
+
+int main()
+{
+int x = 1, y = 2;
+printf("o valor de x e:%d\n", x);
+printf("o valor de y e:%d\n", y);
+troca (&y, &x);
+printf("o valor de x:%d", x);
+printf9("o valor de y:%d", y);
+return 0;
+}
