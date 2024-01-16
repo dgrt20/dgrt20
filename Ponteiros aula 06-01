@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+int valor;
+float valor2;
+
+printf("digite o valor 1:");
+scanf("%d", &valor);
+printf("digite o valor 2:");
+scanf("%f", &valor2);
+
+int *p;
+float *p2;
+
+p = &valor;
+p2 = &valor2;
+
+printf("os valores antes:  %d | %.2f", valor, valor2);
+printf("\n");
+
+*p *= 3;
+*p2 *= 3;
+
+printf("os valores depois: %d | %.2f", valor, valor2);
+printf("\n");
+return 0;
+}
