@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+int *x, y;
+
+printf("digite um valor para o vetor: ");
+scanf("%d", &y);
+x = malloc(y*sizeof(int));
+
+int  i;
+for (i=0; i<y; i++)
+{
+    printf("digite os valores para cada vetor: [%d]: ", i);
+    scanf("%d", &x[i]);
+}
+for (i=0; i<y; i++)
+{
+printf("os valores sao: %d |\n", x[i]);
+}
+free(x);
+
+return 0;
+}
