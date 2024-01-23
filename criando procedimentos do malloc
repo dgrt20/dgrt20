@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void processo(int *x, int y)
+{
+    int i;
+    for(i=0;i<y; i++)
+    {
+        printf("digite os valores: ");
+        scanf("%d", &x[i]);
+    }
+}
+
+void imprime (int *x, int y)
+{
+    int i;
+    for (i=0; i<y;i++)
+    {
+        printf("os valores digitados sao: %d \n",x[i]);
+    }
+}
+int *aloca (int t)
+{
+    int *x;
+    x = malloc(t*sizeof(int));
+
+    return (x);
+}
+
+int main()
+{
+    int tam;
+    printf("digite os valor para o tamanho do vetor: ");
+    scanf("%d", &tam);
+
+    int *z;
+    z = aloca(tam);
+    processo(z,tam);
+    imprime (z,tam);
+
+    free (z);
+
+    return 0;
+}
